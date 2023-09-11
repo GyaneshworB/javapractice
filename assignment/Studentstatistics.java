@@ -57,14 +57,33 @@ public class Studentstatistics {
     System.out.println("Highest Mark: " + highMark);
     System.out.println("Lowest Mark: " + lowMark);
     
+    //f6 calculating the mean and standard deviation
     
+    double sum = 0;
+    for(double mark: marks){
+        sum += mark;
+    }
+    
+    double mean = sum/marks.length;
+    
+    double sumOfSquares = 0;
+    for(double mark: marks){
+        sumOfSquares += Math.pow(mark-mean,2);
+    }
+    
+    double standardDeviation = Math.sqrt(sumOfSquares/ marks.length);
+    
+    System.out.println("Mean: "+ mean);
+    System.out.println("Standard Deviation: " + standardDeviation);
+    
+    input.close();
     
     
     
     
     }
     
-    //
+    
     
 }
     
