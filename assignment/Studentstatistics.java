@@ -28,6 +28,9 @@ public class Studentstatistics {
                 System.out.println("Error: The marks should only be between 0 and 30 ");
             
             }
+
+            
+            
             
         }while(mark <0 || mark >30);
         
@@ -38,6 +41,22 @@ public class Studentstatistics {
         for(i=0 ; i< marks.length; i++){
         System.out.print(marks[i]);
     }
+    
+    //f5: printing the highest and lowest marks
+    double highMark = marks[0];
+    double lowMark = marks[0];
+    
+    for(int j =1; j<marks.length;j++){
+        if(marks[j] > highMark)
+            highMark = marks[j];
+            
+        if(marks[j] < lowMark)
+            lowMark = marks[j];
+    }
+    
+    System.out.println("Highest Mark: " + highMark);
+    System.out.println("Lowest Mark: " + lowMark);
+    
     
     
     
